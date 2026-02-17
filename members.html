@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Blog - Young Women in Politics</title>
+    <title>League Members - Young Women in Politics</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Body text and headings in dark brown */
@@ -41,7 +41,7 @@
             }
         }
 
-        /* Navigation */
+        /* Navigation menu - visible on top right, horizontal */
         nav ul {
             list-style: none;
             display: flex;
@@ -54,8 +54,8 @@
         
         nav ul li {
             margin-left: 20px;
-        }
             position: relative;
+        }
         
         nav ul li a {
             text-decoration: none;
@@ -66,83 +66,7 @@
         }
         
         nav ul li a:hover {
-
-        /* Dropdown menu */
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            min-width: 180px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            z-index: 1;
-            top: 100%;
-            left: 0;
-            border: 1px solid #ccc;
-        }
-
-        .dropdown-content a {
-            color: #4b2e2e !important;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            font-weight: bold;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ffd6e0;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown > a::after {
-            content: " ▼";
-            font-size: 0.7em;
-        }
             color: #27ae60;
-
-        /* Dropdown menu */
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            min-width: 180px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            z-index: 1;
-            top: 100%;
-            left: 0;
-            border: 1px solid #ccc;
-        }
-
-        .dropdown-content a {
-            color: #4b2e2e !important;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            font-weight: bold;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ffd6e0;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown > a::after {
-            content: " ▼";
-            font-size: 0.7em;
-        }
         }
 
         /* Dropdown menu */
@@ -181,6 +105,12 @@
         .dropdown > a::after {
             content: " ▼";
             font-size: 0.7em;
+        }
+
+        @media (max-width: 900px) {
+            nav ul li {
+                margin: 5px 10px;
+            }
         }
 
         /* Content section */
@@ -244,8 +174,8 @@
 </header>
 
 <section>
-    <h1>Blog</h1>
-    <p>Read our latest articles, stories, and updates from our members.</p>
+    <h1>League Members</h1>
+    <p>Meet the dedicated young women who are part of our League.</p>
     <p>Content coming soon...</p>
 </section>
 

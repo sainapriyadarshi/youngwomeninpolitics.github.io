@@ -5,31 +5,206 @@
     <title>Leadership - Young Women in Politics</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Body text and headings in dark brown */
         body, h1, h2, h3, h4, h5, h6, p, li, a {
             color: #4b2e2e !important;
             font-family: Arial, sans-serif;
         }
+
         body {
             margin: 0;
             padding: 0;
             background-color: #fdf9f3;
-            scroll-behavior: smooth;
-        }
-        header, nav, footer {
-            /* reuse existing header/footer styles from index.html */
         }
 
-        /* Leadership section styles */
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header img {
+            height: 150px;
+            width: auto;
+        }
+
+        @media (max-width: 600px) {
+            header img {
+                height: 100px;
+            }
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+            position: relative;
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #4b2e2e !important;
+            font-weight: bold;
+            transition: color 0.3s;
+            white-space: nowrap;
+        }
+        
+        nav ul li a:hover {
+
+        /* Dropdown menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 180px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1;
+            top: 100%;
+            left: 0;
+            border: 1px solid #ccc;
+        }
+
+        .dropdown-content a {
+            color: #4b2e2e !important;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ffd6e0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown > a::after {
+            content: " ▼";
+            font-size: 0.7em;
+        }
+            color: #27ae60;
+
+        /* Dropdown menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 180px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1;
+            top: 100%;
+            left: 0;
+            border: 1px solid #ccc;
+        }
+
+        .dropdown-content a {
+            color: #4b2e2e !important;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ffd6e0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown > a::after {
+            content: " ▼";
+            font-size: 0.7em;
+        }
+        }
+
+        /* Dropdown menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 180px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1;
+            top: 100%;
+            left: 0;
+            border: 1px solid #ccc;
+        }
+
+        .dropdown-content a {
+            color: #4b2e2e !important;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ffd6e0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown > a::after {
+            content: " ▼";
+            font-size: 0.7em;
+        }
+
+        /* Leadership section */
         #leadership {
-            padding: 60px 20px;
+            padding: 80px 20px;
             max-width: 1000px;
             margin: auto;
+        }
+
+        #leadership h1 {
             text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #leadership h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
         }
 
         .leadership-container {
             display: flex;
-            gap: 40px;
+            gap: 60px;
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 30px;
@@ -37,7 +212,7 @@
 
         .leader {
             text-align: center;
-            max-width: 250px;
+            max-width: 300px;
         }
 
         .leader-img {
@@ -46,16 +221,35 @@
             object-fit: cover;
             border-radius: 50%;
             margin-bottom: 15px;
+            border: 3px solid #ffd6e0;
         }
 
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #27ae60;
-            color: white;
-            border-radius: 5px;
+        .leader h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .leader p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ffd6e0;
+            color: #4b2e2e;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        footer a {
+            color: #4b2e2e !important;
+            margin: 0 10px;
             text-decoration: none;
-            margin-top: 10px;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -63,28 +257,27 @@
 
 <header>
     <img src="logo.png" alt="Young Women in Politics Logo">
-    <div class="menu-toggle" id="menu-toggle">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
     <nav>
-        <ul id="nav-links">
+        <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#mission">Mission</a></li>
-            <li><a href="index.html#about">About Us</a></li>
-            <li><a href="index.html#resources">Resources</a></li>
-            <li><a href="index.html#events">Upcoming Meetings & Events</a></li>
-            <li><a href="index.html#blog">Blog</a></li>
-            <li><a href="index.html#faqs">FAQs</a></li>
-            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="mission.html">Mission</a></li>
+            <li class="dropdown">
+                <a href="#" onclick="return false;">About Us</a>
+                <div class="dropdown-content">
+                    <a href="leadership.html">Leadership</a>
+                    <a href="members.html">League Members</a>
+                </div>
+            </li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
         </ul>
     </nav>
 </header>
 
 <section id="leadership">
-    <h2>Leadership</h2>
-    <p>Meet our student leaders driving the Young Women in Politics initiative.</p>
+    <h1>Leadership</h1>
     <div class="leadership-container">
         <div class="leader">
             <img src="saina.png" alt="Saina Priyadarshi" class="leader-img">
@@ -100,21 +293,13 @@
 </section>
 
 <footer>
+    <h2>Contact Us</h2>
+    <p>
+        <a href="https://www.instagram.com/yourinstagramhandle" target="_blank">Instagram</a> |
+        <a href="mailto:info@youngwomeninpolitics.com">Email</a>
+    </p>
     <p>&copy; 2026 Young Women in Politics. All rights reserved.</p>
 </footer>
-
-<script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    menuToggle.addEventListener('click', () => {
-        if (navLinks.style.display === 'flex') {
-            navLinks.style.display = 'none';
-        } else {
-            navLinks.style.display = 'flex';
-        }
-    });
-</script>
 
 </body>
 </html>
