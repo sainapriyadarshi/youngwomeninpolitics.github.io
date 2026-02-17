@@ -115,6 +115,20 @@
             margin-bottom: 40px;
         }
 
+        /* Mission section */
+        #mission {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+            background-color: #fff;
+        }
+
+        #mission h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
         .leadership-container {
             display: flex;
             gap: 60px;
@@ -173,7 +187,7 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="mission.html">Mission</a></li>
+            <li><a href="#mission">Mission</a></li>
             <li><a href="#leadership">About Us</a></li>
             <li><a href="resources.html">Resources</a></li>
             <li><a href="events.html">Events</a></li>
@@ -187,7 +201,17 @@
 <section id="home">
     <h1>Welcome to Young Women in Politics!</h1>
     <p>Empowering young women to lead, inspire change, and make a positive impact in our community through political engagement and civic leadership.</p>
-    <img src="welcome-image-v2.svg" alt="Young Women in Politics Community">
+    <img src="welcome-image-v2.png" alt="Young Women in Politics Community">
+</section>
+
+<!-- Mission section - hidden, only accessible via Mission link -->
+<section id="mission" style="display: none;">
+    <h2>Our Mission</h2>
+    <div style="max-width: 800px; margin: 40px auto; text-align: center;">
+        <p style="font-size: 1.2em; line-height: 1.8;">
+            Through shared resources and a strong community of motivated high school young women, the League of Young Women in Politics works to reduce gaps in political representation and confidence. We create supportive spaces for informed discussion, civic engagement, and leadership development — empowering the next generation of women leaders.
+        </p>
+    </div>
 </section>
 
 <!-- Leadership section - hidden, only accessible via About Us link -->
@@ -209,26 +233,45 @@
 </section>
 
 <script>
-    // Show leadership section when About Us is clicked
+    // Show/hide sections based on navigation clicks
     document.addEventListener('DOMContentLoaded', function() {
-        const aboutLink = document.querySelector('a[href="#leadership"]');
         const homeSection = document.getElementById('home');
+        const missionSection = document.getElementById('mission');
         const leadershipSection = document.getElementById('leadership');
         
-        aboutLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            homeSection.style.display = 'none';
-            leadershipSection.style.display = 'block';
-            leadershipSection.scrollIntoView({ behavior: 'smooth' });
-        });
-        
-        // Show home section when Home is clicked
         const homeLink = document.querySelector('a[href="#home"]');
+        const missionLink = document.querySelector('a[href="#mission"]');
+        const aboutLink = document.querySelector('a[href="#leadership"]');
+        
+        // Function to hide all sections
+        function hideAllSections() {
+            homeSection.style.display = 'none';
+            missionSection.style.display = 'none';
+            leadershipSection.style.display = 'none';
+        }
+        
+        // Show home section
         homeLink.addEventListener('click', function(e) {
             e.preventDefault();
+            hideAllSections();
             homeSection.style.display = 'block';
-            leadershipSection.style.display = 'none';
             homeSection.scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Show mission section
+        missionLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            hideAllSections();
+            missionSection.style.display = 'block';
+            missionSection.scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Show leadership section
+        aboutLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            hideAllSections();
+            leadershipSection.style.display = 'block';
+            leadershipSection.scrollIntoView({ behavior: 'smooth' });
         });
     });
 </script>
