@@ -2,58 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Nonprofit Website</title>
+    <title>Young Women in Politics</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo.png" sizes="any">
+    <style>
+        /* Basic layout styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf9f3;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header img {
+            height: 60px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 25px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #27ae60;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        h2 {
+            color: #27ae60;
+            margin-bottom: 15px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #27ae60;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #27ae60;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
 <header>
+    <img src="logo.png" alt="Young Women in Politics Logo">
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#mission">Mission</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#events">Upcoming Meetings & Events</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#faqs">FAQs</a></li>
         </ul>
     </nav>
 </header>
 
-<section id="hero" style="background-color: beige;">
-    <h1>Welcome to Our Nonprofit</h1>
-    <p>Empowering communities for a better future.</p>
-    <img src="logo.png" alt="Logo">
+<section id="home">
+    <h2>Welcome</h2>
+    <p>Welcome to Young Women in Politics! Empowering students to lead and make a positive impact in our community.</p>
 </section>
 
 <section id="mission">
-    <h2>Our Mission</h2>
-    <p>To foster social change through community engagement and empowerment.</p>
-</section>
-
-<section id="features">
-    <h2>Features</h2>
-    <ul>
-        <li>Feature 1: Community Programs</li>
-        <li>Feature 2: Volunteer Opportunities</li>
-        <li>Feature 3: Fundraising Events</li>
-    </ul>
-</section>
-
-<section id="team">
-    <h2>Meet Our Team</h2>
-    <p>We have a dedicated group of individuals passionate about making a difference.</p>
-</section>
-
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>If you have any questions, feel free to <a href="mailto:info@example.com">email us</a>.</p>
-</section>
-
-<footer>
-    <p>&copy; 2026 Our Nonprofit. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
