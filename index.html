@@ -5,12 +5,16 @@
     <title>Young Women in Politics</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
+        /* Body text and headings in dark brown */
+        body, h1, h2, h3, h4, h5, h6, p, li, a {
+            color: #4b2e2e !important; /* Dark brown text everywhere */
             font-family: Arial, sans-serif;
+        }
+
+        body {
             margin: 0;
             padding: 0;
             background-color: #fdf9f3;
-            color: #4b2e2e; /* Dark brown text */
             scroll-behavior: smooth; /* Smooth scrolling */
         }
 
@@ -26,9 +30,16 @@
             top: 0;
             z-index: 100;
         }
+
         header img {
-            height: 120px;
+            height: 180px; /* Bigger logo */
             width: auto;
+        }
+
+        @media (max-width: 600px) {
+            header img {
+                height: 90px; /* smaller on mobile */
+            }
         }
 
         /* Navigation menu */
@@ -43,7 +54,7 @@
         }
         nav ul li a {
             text-decoration: none;
-            color: #4b2e2e;
+            color: #4b2e2e !important;
             font-weight: bold;
             transition: color 0.3s;
         }
@@ -90,10 +101,6 @@
             max-width: 1000px;
             margin: auto;
         }
-        h2 {
-            color: #27ae60;
-            margin-bottom: 15px;
-        }
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -112,7 +119,7 @@
             text-align: center;
         }
         footer a {
-            color: #4b2e2e;
+            color: #4b2e2e !important;
             margin: 0 10px;
             text-decoration: none;
             font-weight: bold;
