@@ -114,30 +114,39 @@
             }
         }
 
-        /* Home section with welcome message and image */
+        /* Home section with welcome message and background image */
         #home {
             text-align: center;
-            padding: 80px 20px;
-            max-width: 800px;
-            margin: auto;
+            padding: 120px 20px;
+            max-width: 100%;
+            margin: 0;
+            min-height: 500px;
+            background-image: url('welcome-image-v2.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         #home h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px 40px;
+            border-radius: 10px;
         }
 
         #home p {
             font-size: 1.2em;
             line-height: 1.6;
             margin-bottom: 30px;
-        }
-
-        #home img {
-            max-width: 100%;
-            height: auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px 40px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 800px;
         }
 
         /* Leadership section */
@@ -242,11 +251,10 @@
     </nav>
 </header>
 
-<!-- Homepage with welcome message and image -->
+<!-- Homepage with welcome message and background image -->
 <section id="home">
     <h1>Welcome to Young Women in Politics!</h1>
     <p>Empowering young women to lead, inspire change, and make a positive impact in our community through political engagement and civic leadership.</p>
-    <img src="welcome-image-v2.png" alt="Young Women in Politics Community">
 </section>
 
 <footer>
