@@ -11,34 +11,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Leadership section */
-        #leadership {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .leadership-container {
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .leader {
-            text-align: center;
-            max-width: 250px;
-        }
-
-        .leader-img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%; /* circular images */
-            margin-bottom: 15px;
-        }
-
         body {
             margin: 0;
             padding: 0;
@@ -70,53 +42,37 @@
             }
         }
 
-        /* Hamburger menu - always visible */
-        .menu-toggle {
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        .menu-toggle div {
-            width: 25px;
-            height: 3px;
-            background-color: #4b2e2e;
-            margin: 4px 0;
-            transition: 0.3s;
-        }
-
-        /* Navigation menu - hidden by default */
+        /* Navigation menu - visible on top right, horizontal */
         nav ul {
             list-style: none;
-            display: none;
-            flex-direction: column;
-            background-color: #fff;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            width: 250px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: row;
             margin: 0;
             padding: 0;
+            flex-wrap: wrap;
+            align-items: center;
         }
         
         nav ul li {
-            margin: 0;
-            text-align: left;
-            border-bottom: 1px solid #f0f0f0;
+            margin-left: 20px;
         }
         
         nav ul li a {
-            display: block;
-            padding: 15px 20px;
             text-decoration: none;
             color: #4b2e2e !important;
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: color 0.3s;
+            white-space: nowrap;
         }
         
         nav ul li a:hover {
-            background-color: #ffd6e0;
+            color: #27ae60;
+        }
+
+        @media (max-width: 900px) {
+            nav ul li {
+                margin: 5px 10px;
+            }
         }
 
         /* Home section with welcome message and image */
@@ -145,21 +101,50 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        /* Other Sections - hidden from homepage body */
-        section:not(#home) {
+        /* Leadership section */
+        #leadership {
             padding: 60px 20px;
             max-width: 1000px;
             margin: auto;
+            background-color: #fff;
         }
 
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #27ae60;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 10px;
+        #leadership h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+        .leadership-container {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .leader {
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .leader-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%; /* circular images */
+            margin-bottom: 15px;
+            border: 3px solid #ffd6e0;
+        }
+
+        .leader h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .leader p {
+            font-size: 1em;
+            line-height: 1.5;
         }
 
         /* Footer */
@@ -168,6 +153,7 @@
             color: #4b2e2e;
             padding: 30px 20px;
             text-align: center;
+            margin-top: 60px;
         }
         footer a {
             color: #4b2e2e !important;
@@ -184,21 +170,15 @@
 
 <header>
     <img src="logo.png" alt="Young Women in Politics Logo">
-    <div class="menu-toggle" id="menu-toggle">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
     <nav>
-        <ul id="nav-links">
+        <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#mission">Mission</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#leadership">Leadership</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#events">Upcoming Meetings & Events</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="mission.html">Mission</a></li>
+            <li><a href="#leadership">About Us</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
         </ul>
     </nav>
 </header>
@@ -207,23 +187,13 @@
 <section id="home">
     <h1>Welcome to Young Women in Politics!</h1>
     <p>Empowering young women to lead, inspire change, and make a positive impact in our community through political engagement and civic leadership.</p>
-    <img src="welcome-image.jpg" alt="Young Women in Politics Community">
+    <img src="welcome-image-v2.svg" alt="Young Women in Politics Community">
 </section>
 
-<section id="mission">
-    <h2>Our Mission</h2>
-    <p>We aim to inspire, educate, and support young women interested in politics, leadership, and civic engagement.</p>
-</section>
-
-<section id="about">
+<!-- Leadership section - hidden, only accessible via About Us link -->
+<section id="leadership" style="display: none;">
     <h2>About Us</h2>
-    <p>Our nonprofit is student-led and focuses on mentorship, events, and resources for young women pursuing political engagement.</p>
-</section>
-
-<!-- Leadership section -->
-<section id="leadership">
-    <h2>Leadership</h2>
-    <p>Meet our student leaders driving the Young Women in Politics initiative.</p>
+    <h3 style="text-align: center; margin-top: -20px; margin-bottom: 40px;">Leadership</h3>
     <div class="leadership-container">
         <div class="leader">
             <img src="saina.png" alt="Saina Priyadarshi" class="leader-img">
@@ -238,27 +208,30 @@
     </div>
 </section>
 
-<section id="resources">
-    <h2>Resources</h2>
-    <p>Access guides, articles, and workshops to enhance your knowledge and leadership skills.</p>
-</section>
-
-<section id="events">
-    <h2>Upcoming Meetings & Events</h2>
-    <p>Check here for our next meetings, workshops, and community events.</p>
-    <a href="#" class="button">See Calendar</a>
-</section>
-
-<section id="blog">
-    <h2>Blog</h2>
-    <p>Read our latest articles, stories, and updates from our members.</p>
-    <a href="#" class="button">Visit Blog</a>
-</section>
-
-<section id="faqs">
-    <h2>FAQs</h2>
-    <p>Find answers to commonly asked questions about our nonprofit and how to get involved.</p>
-</section>
+<script>
+    // Show leadership section when About Us is clicked
+    document.addEventListener('DOMContentLoaded', function() {
+        const aboutLink = document.querySelector('a[href="#leadership"]');
+        const homeSection = document.getElementById('home');
+        const leadershipSection = document.getElementById('leadership');
+        
+        aboutLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            homeSection.style.display = 'none';
+            leadershipSection.style.display = 'block';
+            leadershipSection.scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Show home section when Home is clicked
+        const homeLink = document.querySelector('a[href="#home"]');
+        homeLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            homeSection.style.display = 'block';
+            leadershipSection.style.display = 'none';
+            homeSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
 
 <footer>
     <h2>Contact Us</h2>
@@ -268,20 +241,6 @@
     </p>
     <p>&copy; 2026 Young Women in Politics. All rights reserved.</p>
 </footer>
-
-<script>
-    // Toggle mobile menu
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    menuToggle.addEventListener('click', () => {
-        if (navLinks.style.display === 'flex') {
-            navLinks.style.display = 'none';
-        } else {
-            navLinks.style.display = 'flex';
-        }
-    });
-</script>
 
 </body>
 </html>
