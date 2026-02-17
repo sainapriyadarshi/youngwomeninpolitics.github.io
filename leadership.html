@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leadership - Young Women in Politics</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6, p, li, a {
+            color: #4b2e2e !important;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fdf9f3;
+            scroll-behavior: smooth;
+        }
+        header, nav, footer {
+            /* reuse existing header/footer styles from index.html */
+        }
+
+        /* Leadership section styles */
+        #leadership {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .leadership-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .leader {
+            text-align: center;
+            max-width: 250px;
+        }
+
+        .leader-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #27ae60;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Young Women in Politics Logo">
+    <div class="menu-toggle" id="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#mission">Mission</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#resources">Resources</a></li>
+            <li><a href="index.html#events">Upcoming Meetings & Events</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#faqs">FAQs</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="leadership">
+    <h2>Leadership</h2>
+    <p>Meet our student leaders driving the Young Women in Politics initiative.</p>
+    <div class="leadership-container">
+        <div class="leader">
+            <img src="saina.png" alt="Saina Priyadarshi" class="leader-img">
+            <h3>Saina Priyadarshi</h3>
+            <p>Bio placeholder: Add a short description about Saina here.</p>
+        </div>
+        <div class="leader">
+            <img src="ella.png" alt="Ella Cohen" class="leader-img">
+            <h3>Ella Cohen</h3>
+            <p>Bio placeholder: Add a short description about Ella here.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Young Women in Politics. All rights reserved.</p>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        if (navLinks.style.display === 'flex') {
+            navLinks.style.display = 'none';
+        } else {
+            navLinks.style.display = 'flex';
+        }
+    });
+</script>
+
+</body>
+</html>
